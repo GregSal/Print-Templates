@@ -1,0 +1,21 @@
+﻿Section=Form
+PaperSize=Letter
+PaperOrientation=Portrait
+Margin=0
+Move=0
+
+#########
+Text=UserOriginTest
+Text=PatientId; $PatientId
+Text=CourseId;$CourseId
+Text=PlanId;$PlanId
+Text=ImageId;$ImageId
+Text=UserOrigin;$ImageUserOrigin
+Text=ImagingOrientation;$PatientImagingOrientation
+Text=TreatmentOrientation;$PatientTreatmentOrientation
+Loop=Fields
+  Text=FieldId;$FieldId
+  Text=IsoX;$FieldIsocenterX
+  Text=IsoY;$FieldIsocenterY
+  Text=IsoZ;$FieldIsocenterZ
+EndLoop

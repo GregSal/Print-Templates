@@ -1,0 +1,618 @@
+########################################################################################
+{
+"PLAN SUM": {
+"PlanSumId": "$PlanSumId",
+"PlanSumName": "$PlanSumName",
+"PlanSumCourseId": "$PlanSumCourseId",
+"SumPlans": [{
+Loop=SumPlans
+  "PlanIdOfSum": "$PlanIdOfSum",
+  "PlanNameOfSum": "$PlanNameOfSum",
+  "DosePerFrac_ForSum": "$DosePerFrac_ForSum",
+  "NbrOfFrac_ForSum": "$NbrOfFrac_ForSum",
+  "TotalDose_ForSum": "$TotalDose_ForSum",
+  "TotalDoseAtPrimary_ForSum": "$TotalDoseAtPrimary_ForSum",
+  "DosePerFraction_ForSum": "$DosePerFraction_ForSum",
+    },
+    EndLoop
+    ],
+
+########################################################################################
+},
+"GENERAL": {
+"ApplicationName": "$ApplicationName",
+"ApplicationVersion": "$ApplicationVersion",
+"TaskName": "$TaskName",
+"TaskVersion": "$TaskVersion",
+"Comment": "$Comment",
+"PageNumber": "$PageNumber",
+"CursorPos": "$CursorPos",
+"UserId": "$UserId",
+"UserName": "$UserName",
+"NotCoverPage": "$NotCoverPage",
+"TemplateName": "$TemplateName",
+"CurrentDay": "$CurrentDay",
+"CurrentMonth": "$CurrentMonth",
+"CurrentYear": "$CurrentYear",
+"CurrentSecond": "$CurrentSecond",
+"CurrentMinute": "$CurrentMinute",
+"CurrentHour": "$CurrentHour",
+"CurrentDate": "$CurrentDate",
+"CurrentDateShort": "$CurrentDateShort",
+"ExtendedTimeInfo": "$ExtendedTimeInfo",
+"ShowExtendedTimeInfo": "$ShowExtendedTimeInfo",
+
+},
+"PATIENT": {
+"PatientFirstName": "$PatientFirstName",
+"PatientMiddleName": "$PatientMiddleName",
+"PatientLastName": "$PatientLastName",
+"PatientComment": "$PatientComment",
+"PatientSex": "$PatientSex",
+"PatientDateOfBirth": "$PatientDateOfBirth",
+"PatientId": "$PatientId",
+"PatientId2": "$PatientId2",
+"Hospital": "$Hospital",
+"PrimaryOncologistName": "$PrimaryOncologistName",
+"PrimaryOncologist": "$PrimaryOncologist",
+"PrimaryReferringPhysicianName": "$PrimaryReferringPhysicianName",
+"PrimaryReferringPhysician": "$PrimaryReferringPhysician",
+
+},
+"PROTOCOL": {
+"ProtocolId": "$ProtocolId",
+"ProtocolStatus": "$ProtocolStatus",
+"IsPlanPhase": "$IsPlanPhase",
+"Phases": [{
+Loop=Phases
+  "PhaseId": "$PhaseId",
+  "PhaseTotalFractions": "$PhaseTotalFractions",
+  "PhaseFractionsPerWeek": "$PhaseFractionsPerWeek",
+  "PhaseFractionsPerDay": "$PhaseFractionsPerDay",
+  "ImmobilizationDevice": "$ImmobilizationDevice",
+  "LocalizationTechnique": "$LocalizationTechnique",
+    "PrescriptionItems": [{
+  Loop=PrescriptionItems
+    "PrescriptionType": "$PrescriptionType",
+    "PrescriptionModifier": "$PrescriptionModifier",
+    "PrescriptionText": "$PrescriptionText",
+    "PrescriptionDose": "$PrescriptionDose",
+    "ActualDose": "$ActualDose",
+          },
+          EndLoop
+          ],
+    "IndexItems": [{
+  Loop=IndexItems
+    "IndexStructure": "$IndexStructure",
+    "IndexType": "$IndexType",
+    "IndexModifier": "$IndexModifier",
+    "IndexValue": "$IndexValue",
+    "IndexActualValue": "$IndexActualValue",
+          },
+          EndLoop
+          ],
+    },
+    EndLoop
+    ],
+
+},
+"DVH": {
+"DVHPlanSummaryRows": [{
+Loop=DVHPlanSummaryRows
+  Color=$DVHColor
+  "DVHColor": "$DVHColor",
+    },
+    EndLoop
+    ],
+"DVHSummaryRows": [{
+Loop=DVHSummaryRows
+  "DVHStructure": "$DVHStructure",
+  "StructureStatus": "$StructureStatus",
+  "DVHCoverage": "$DVHCoverage",
+  "DVHVolume": "$DVHVolume",
+  "DVHMin": "$DVHMin",
+  "DVHMax": "$DVHMax",
+  "DVHMean": "$DVHMean",
+  "DVHModal": "$DVHModal",
+  "DVHMedian": "$DVHMedian",
+  "DVHStdDev": "$DVHStdDev",
+  "DVHNDR": "$DVHNDR",
+  "DVHESD": "$DVHESD",
+  "DVHConformity": "$DVHConformity",
+  "DVHGradient": "$DVHGradient",
+    },
+    EndLoop
+    ],
+#DVHGraph=1200;800
+
+},
+"IMAGE": {
+"ImageId": "$ImageId",
+"ImageName": "$ImageName",
+"ImageComment": "$ImageComment",
+"ImageApprover": "$ImageApprover",
+"ImageApprovalDate": "$ImageApprovalDate",
+"ImageModality": "$ImageModality",
+"ImageSeriesId": "$ImageSeriesId",
+"ImageSeriesComment": "$ImageSeriesComment",
+"ImageContrastBolusAgent": "$ImageContrastBolusAgent",
+"ImageContrastBolusAgentIngredient": "$ImageContrastBolusAgentIngredient",
+"ImageContrastBolusAgentExists": "$ImageContrastBolusAgentExists",
+"ImagingDeviceId": "$ImagingDeviceId",
+"ImagingDeviceModel": "$ImagingDeviceModel",
+"ImagingDeviceManufacturer": "$ImagingDeviceManufacturer",
+"ImagingDeviceSerialNumber": "$ImagingDeviceSerialNumber",
+"ImageUserOrigin": "$ImageUserOrigin",
+"ImageUserOriginComment": "$ImageUserOriginComment",
+"PatientImagingOrientation": "$PatientImagingOrientation",
+"PatientTreatmentOrientation": "$PatientTreatmentOrientation",
+"PlanningCoordinateSystemName": "$PlanningCoordinateSystemName",
+
+},
+"STRUCTURE SET": {
+"StructureSetId": "$StructureSetId",
+"StructureSetComment": "$StructureSetComment",
+"Structures": [{
+Loop=Structures
+  "StructureId": "$StructureId",
+  "StructureName": "$StructureName",
+  "StructureType": "$StructureType",
+  "StructureComment": "$StructureComment",
+  "IsStructureCTValue": "$IsStructureCTValue",
+  "StructureCTValue": "$StructureCTValue",
+  "StructureStatus": "$StructureStatus",
+  "IsStructureFieldSpecificTarget": "$IsStructureFieldSpecificTarget", 
+    },
+    EndLoop
+    ],
+
+},
+"PLAN": {
+"CourseId": "$CourseId",
+"CourseIntent": "$CourseIntent",
+"CourseComment": "$CourseComment",
+"PlanId": "$PlanId",
+"PlanName": "$PlanName",
+"PlanComment": "$PlanComment",
+"PlanIntent": "$PlanIntent",
+"IsPlanModified": "$IsPlanModified",
+"PlanCreator": "$PlanCreator",
+"PlanCreationDate": "$PlanCreationDate",
+"PlanModifier": "$PlanModifier",
+"PlanModificationDate": "$PlanModificationDate",
+"PlanningApprovalDate": "$PlanningApprovalDate",
+"PlanningApprover": "$PlanningApprover",
+"TreatmentApprovalDate": "$TreatmentApprovalDate",
+"TreatmentApprover": "$TreatmentApprover",
+"ApprovalStatus": "$ApprovalStatus",
+"ApprovalDate": "$ApprovalDate",
+"ApprovalUserName": "$ApprovalUserName",
+"TargetVolume": "$TargetVolume",
+"PlanNormMethodWarning": "$PlanNormMethodWarning",
+"PlanNormPoint": "$PlanNormPoint",
+"PlanNormPointX": "$PlanNormPointX",
+"PlanNormPointY": "$PlanNormPointY",
+"PlanNormPointZ": "$PlanNormPointZ",
+"IsIRREGPlan": "$IsIRREGPlan",
+"IsVerificationPlan": "$IsVerificationPlan",
+"IsAllMUperGyValid": "$IsAllMUperGyValid",
+"TreatmentTechnique": "$TreatmentTechnique",
+"ApplicationSetupType": "$ApplicationSetupType",
+"PrescribedDosePercent": "$PrescribedDosePercent",
+"PrescribedDosePercentage": "$PrescribedDosePercentage",
+"PrimaryDosimeterUnitLabelPlan": "$PrimaryDosimeterUnitLabelPlan",
+"Fractions": "$Fractions",
+"FractionStartDelay": "$FractionStartDelay",
+"FractionsPerWeek": "$FractionsPerWeek",
+"FractionsPerDay": "$FractionsPerDay",
+"FractionsOnMonday": "$FractionsOnMonday",
+"FractionsOnTuesday": "$FractionsOnTuesday",
+"FractionsOnWednesday": "$FractionsOnWednesday",
+"FractionsOnThursday": "$FractionsOnThursday",
+"FractionsOnFriday": "$FractionsOnFriday",
+"FractionsOnSaturday": "$FractionsOnSaturday",
+"FractionsOnSunday": "$FractionsOnSunday",
+"PrescribedDosePerFraction": "$PrescribedDosePerFraction",
+"PrescribedDose": "$PrescribedDose",
+"PrimaryRefPointId": "$PrimaryRefPointId",
+"PrimaryRefPointName": "$PrimaryRefPointName",
+"DosePerFractionInPrimaryRefPoint": "$DosePerFractionInPrimaryRefPoint",
+"DoseInPrimaryRefPoint": "$DoseInPrimaryRefPoint",
+"RelativeDoseInPrimaryRefPoint": "$RelativeDoseInPrimaryRefPoint",
+
+},
+"HYPERARC": {
+"IsHyperArcPlan": "$IsHyperArcPlan",
+If=$IsHyperArcPlan
+"FixationDevice": "$FixationDevice",
+"TargetQualityMetricsTitle_RTOG_CI": "$TargetQualityMetricsTitle_RTOG_CI",
+"TargetQualityMetricsTitle_Paddick_CI": "$TargetQualityMetricsTitle_Paddick_CI",
+"TargetQualityMetricsTitle_GI": "$TargetQualityMetricsTitle_GI",
+"TargetQualityMetricsTitle_ICRU83_HI": "$TargetQualityMetricsTitle_ICRU83_HI",
+EndIf
+
+},
+"TARGET DOSE LEVEL": {
+"TargetDoseLevels": [{
+Loop=TargetDoseLevels
+  "TargetEvaluationDoseLevel": "$TargetEvaluationDoseLevel",
+  "TargetDoseLevelStructureId": "$TargetDoseLevelStructureId",
+  "TargetQualityMetricsValue_RTOG_CI": "$TargetQualityMetricsValue_RTOG_CI",
+  "TargetQualityMetricsValue_Paddick_CI": "$TargetQualityMetricsValue_Paddick_CI",
+  "TargetQualityMetricsValue_GI": "$TargetQualityMetricsValue_GI",
+  "TargetQualityMetricsValue_ICRU83_HI": "$TargetQualityMetricsValue_ICRU83_HI",
+    },
+    EndLoop
+    ],
+
+},
+"DOSE": {
+"DoseCalculationMedium": "$DoseCalculationMedium",
+"DoseCalculationMethod": "$DoseCalculationMethod",
+
+},
+"REFERENCE POINT": {
+"RefPoints": "$RefPoints",
+"RefPoints": [{
+Loop=RefPoints
+  "RefPointId": "$RefPointId",
+  "RefPointName": "$RefPointName",
+  "IsPrimaryRefPoint": "$IsPrimaryRefPoint",
+  "RefPointType": "$RefPointType",
+  "RefPointTotalPlannedDose": "$RefPointTotalPlannedDose",
+  "RefPointTotalDoseLimit": "$RefPointTotalDoseLimit",
+  "RefPointDailyDoseLimit": "$RefPointDailyDoseLimit",
+  "RefPointSessionDoseLimit": "$RefPointSessionDoseLimit",
+  "RefPointTotalDeliveredDose": "$RefPointTotalDeliveredDose",
+  "RefPointTotalDosePerFraction": "$RefPointTotalDosePerFraction",
+  "RefPointTotalDose": "$RefPointTotalDose",
+  "RefPointPatientVolumeName": "$RefPointPatientVolumeName",
+  "RefPointPatientVolumeId": "$RefPointPatientVolumeId",
+  "RefPointX": "$RefPointX",
+  "RefPointY": "$RefPointY",
+  "RefPointZ": "$RefPointZ",
+    },
+    EndLoop
+    ],
+
+},
+"PLAN VARIATION": {
+"ShowUncertaintyDVH": "$ShowUncertaintyDVH",
+"PlanVariationSummary": [{
+Loop=PlanVariationSummary
+  "PlanVariationName": "$PlanVariationName",
+  "PlanVariationShiftX": "$PlanVariationShiftX",
+  "PlanVariationShiftY": "$PlanVariationShiftY",
+  "PlanVariationShiftZ": "$PlanVariationShiftZ",
+  "PlanVariationHUError": "$PlanVariationHUError",
+    },
+    EndLoop
+    ],
+
+
+},
+"EXTERNAL BEAM PLAN": {
+
+},
+"GENERAL": {
+"Fields": "$Fields",
+"PhotonFields": "$PhotonFields",
+"ElectronFields": "$ElectronFields",
+"ProtonFields": "$ProtonFields",
+"IMRTFields": "$IMRTFields",
+"VMATFields": "$VMATFields",
+"Compensators": "$Compensators",
+"ImportedCompensators": "$ImportedCompensators",
+"IMRTOptimizedFields": "$IMRTOptimizedFields",
+"VMATOptimizedFields": "$VMATOptimizedFields",
+"BeamAngleOptimizedFields": "$BeamAngleOptimizedFields",
+"CalculatedCompensators": "$CalculatedCompensators",
+"CalculatedPortalDoseImages": "$CalculatedPortalDoseImages",
+"ModulatedScanningFields": "$ModulatedScanningFields",
+"UniformScanningFields": "$UniformScanningFields",
+"SingleScatteringFields": "$SingleScatteringFields",
+"DoubleScatteringFields": "$DoubleScatteringFields",
+"TableShift": "$TableShift",
+"PlanHasGantryPitchAngle": "$PlanHasGantryPitchAngle",
+
+},
+"Calculation": {
+"PhotonAlg": "$PhotonAlg",
+"PhotonVolumeDoseAlg": "$PhotonVolumeDoseAlg",
+"PhotonPointDoseAlg": "$PhotonPointDoseAlg",
+"PhotonPortalDoseAlg": "$PhotonPortalDoseAlg",
+"PhotonCompensatorAlg": "$PhotonCompensatorAlg",
+"PhotonIrregularCompensatorAlg": "$PhotonIrregularCompensatorAlg",
+"PhotonIMRTOptimizationAlg": "$PhotonIMRTOptimizationAlg",
+"PhotonBeamAngleOptimizationAlg": "$PhotonBeamAngleOptimizationAlg",
+"PhotonVMATOptimizationAlg": "$PhotonVMATOptimizationAlg",
+"ProtonAlg": "$ProtonAlg",
+"ProtonVolumeDoseAlg": "$ProtonVolumeDoseAlg",
+"ProtonBeamlineAlg": "$ProtonBeamlineAlg",
+"ProtonCompensatorAlg": "$ProtonCompensatorAlg",
+"ProtonPostProcessingAlg": "$ProtonPostProcessingAlg",
+"ProtonOptimizationAlg": "$ProtonOptimizationAlg",
+"ProtonBLOptimizationAlg": "$ProtonBLOptimizationAlg",
+"ProtonDDCAlg": "$ProtonDDCAlg",
+"ElectronAlg": "$ElectronAlg",
+"ElectronVolumeDoseAlg": "$ElectronVolumeDoseAlg",
+
+"PhotonAlgOptions": [{
+Loop=PhotonAlgOptions
+  "AlgOptionName": "$AlgOptionName",
+  "AlgOptionValue": "$AlgOptionValue",
+},
+EndLoop
+],
+
+},
+"Field": {
+"Fields": [{
+Loop=Fields
+  "FieldName": "$FieldName",
+  "FieldId": "$FieldId",
+  "IsSetupField": "$IsSetupField",
+  "FieldTechnique": "$FieldTechnique",
+  "IsFieldIMRT": "$IsFieldIMRT",
+  "IsOmniwedgeField": "$IsOmniwedgeField",
+  "IsMotorizedWedgeField": "$IsMotorizedWedgeField",
+  "FieldMachineId": "$FieldMachineId",
+  "FieldMachineModel": "$FieldMachineModel",
+  "FieldEnergyMode": "$FieldEnergyMode",
+  "FieldNominalEnergy": "$FieldNominalEnergy",
+  "FieldMachineScale": "$FieldMachineScale",
+  "FieldGantryAngleLabel": "$FieldGantryAngleLabel",
+  "FieldGantryAngle": "$FieldGantryAngle",
+  "FieldGantryPitchAngle": "$FieldGantryPitchAngle",
+  "FieldHasGantryPitchAngle": "$FieldHasGantryPitchAngle",
+  "PlanHasGantryPitchAngle": "$PlanHasGantryPitchAngle",
+  "FieldGantryStopAngle": "$FieldGantryStopAngle",
+  "FieldGantryRotationDir": "$FieldGantryRotationDir",
+  "FieldCollimatorAngleLabel": "$FieldCollimatorAngleLabel",
+  "FieldCollimatorAngle": "$FieldCollimatorAngle",
+  "FieldTableAngleLabel": "$FieldTableAngleLabel",
+  "FieldTableAngle": "$FieldTableAngle",
+  "FieldSizeX": "$FieldSizeX",
+  "FieldSizeY": "$FieldSizeY",
+  "FieldX1": "$FieldX1",
+  "FieldX2": "$FieldX2",
+  "FieldY1": "$FieldY1",
+  "FieldY2": "$FieldY2",
+  "IsFieldSymmetric": "$IsFieldSymmetric",
+  "FieldSymmetry": "$FieldSymmetry",
+  "IsFieldFixedSSD": "$IsFieldFixedSSD",
+  "FieldIsocenterX": "$FieldIsocenterX",
+  "FieldIsocenterY": "$FieldIsocenterY",
+  "FieldIsocenterZ": "$FieldIsocenterZ",
+  "IsImageLocalized": "$IsImageLocalized",
+  "FieldIsocenterBRWAP": "$FieldIsocenterBRWAP",
+  "FieldIsocenterBRWLat": "$FieldIsocenterBRWLat",
+  "FieldIsocenterBRWAxial": "$FieldIsocenterBRWAxial",
+  "FieldGroupNumber": "$FieldGroupNumber",
+    "FieldSSDAtStopAngle": "$FieldSSDAtStopAngle",
+  "FieldSSDAverage": "$FieldSSDAverage",
+    "FieldSFED": "$FieldSFED",
+  "FieldSAD": "$FieldSAD",
+  "VirtualSADX": "$VirtualSADX",
+  "VirtualSADY": "$VirtualSADY",
+  "FieldNormFactor": "$FieldNormFactor",
+  "FieldWeightFactor": "$FieldWeightFactor",
+  "FieldNormMethod": "$FieldNormMethod",
+  "FieldDoseRateLabel": "$FieldDoseRateLabel",
+  "FieldDoseRate": "$FieldDoseRate",
+  "PrimaryDosimeterUnitLabelField": "$PrimaryDosimeterUnitLabelField",
+  "FieldMonitorUnits": "$FieldMonitorUnits",
+  "OpenFieldMonitorUnits": "$OpenFieldMonitorUnits",
+  "WedgedFieldMonitorUnits": "$WedgedFieldMonitorUnits",
+  "VirtualFieldMonitorUnits": "$VirtualFieldMonitorUnits",
+  "FieldMonitorUnitsPerGy": "$FieldMonitorUnitsPerGy",
+  "FieldRefDose": "$FieldRefDose",
+      "BeamCurrentModulation": "$BeamCurrentModulation",
+  "BeamGatingOn": "$BeamGatingOn",
+  "BeamGatingOff": "$BeamGatingOff",
+  "IsCobaltField": "$IsCobaltField",
+  "MinDoseLeafDynamicLeafGap": "$MinDoseLeafDynamicLeafGap",
+  "DosimetricLeafGap": "$DosimetricLeafGap",
+  "FieldApplicators": "$FieldApplicators",
+  "ApplicatorId": "$ApplicatorId",
+      
+      },
+"Calculation": {
+        "FieldCalculationTimestamp": "$FieldCalculationTimestamp",
+  "LmcCalculationTimestamp": "$LmcCalculationTimestamp",
+  "CompCalculationTimestamp": "$CompCalculationTimestamp",
+  "BLCalculationTimestamp": "$BLCalculationTimestamp",
+  "BLOptimizerCalculationTimestamp": "$BLOptimizerCalculationTimestamp",
+  "PostProcessingCalculationTimestamp": "$PostProcessingCalculationTimestamp",
+  "BLOptimizerExecuted": "$BLOptimizerExecuted",
+  "PostProcessingExecuted": "$PostProcessingExecuted",
+                                                                                                          
+          },
+"MLC": {
+        "FieldMLCs": "$FieldMLCs",
+  "MLCId": "$MLCId",
+  "MLCManufacturer": "$MLCManufacturer",
+  "MLCSerialNumber": "$MLCSerialNumber",
+  "MLCModel": "$MLCModel",
+  "MLCRotation": "$MLCRotation",
+  "MLCMaterialId": "$MLCMaterialId",
+  "MLCMaterialName": "$MLCMaterialName",
+  "MLCTransmissionFactor": "$MLCTransmissionFactor",
+  "IsMLCPlanStatic": "$IsMLCPlanStatic",
+  "MLCPlanType": "$MLCPlanType",
+  "MLCPlanSegments": "$MLCPlanSegments",
+      
+      },
+"Compensator": {
+        "FieldCompensators": "$FieldCompensators",
+  "CompensatorId": "$CompensatorId",
+  "CompensatorType": "$CompensatorType",
+  "CompensatorTray": "$CompensatorTray",
+  "CompensatorTrayTransmissionFactor": "$CompensatorTrayTransmissionFactor",
+  "CompensatorAboveTrayFlag": "$CompensatorAboveTrayFlag",
+  "CompensatorCentralAxisThickness": "$CompensatorCentralAxisThickness",
+  "CompensatorPlaneDistance": "$CompensatorPlaneDistance",
+  "CompensatorPenumbraMargin": "$CompensatorPenumbraMargin",
+  "CompensatorBorderSmoothing": "$CompensatorBorderSmoothing",
+  "CompensatorSmearingMargins": "$CompensatorSmearingMargins",
+  "CompensatorSlot": "$CompensatorSlot",
+  "CompensatorMaterialName": "$CompensatorMaterialName",
+  "CompensatorMaterialId": "$CompensatorMaterialId",
+  "CompensatorLinearAttenuationFactor": "$CompensatorLinearAttenuationFactor",
+  "CompensatorStoppingPowerRatio": "$CompensatorStoppingPowerRatio",
+    
+      },
+"Proton Field": {
+        "IsProtonField": "$IsProtonField",
+  "IsProtonPatchField": "$IsProtonPatchField",
+  "IsProtonSpotTuneVisible": "$IsProtonSpotTuneVisible",
+  "IsBeamLineModifiers": "$IsBeamLineModifiers",
+  "PlannedDistalTargetDistance": "$PlannedDistalTargetDistance",
+  "NominalSOBPWidth": "$NominalSOBPWidth",
+  "ProtonPatchTo": "$ProtonPatchTo",
+  "ProtonNumSubfields": "$ProtonNumSubfields",
+  "SnoutId": "$SnoutId",
+  "SnoutAirGap": "$SnoutAirGap",
+  "SnoutPosition": "$SnoutPosition",
+  "BLMType": "$BLMType",
+  "BLMId": "$BLMId",
+  "BLMValue": "$BLMValue",
+  "SpotTune": "$SpotTune",
+  "RangeModulator": "$RangeModulator",
+  "FieldBeamLine": "$FieldBeamLine",
+  "ProtonFieldTargetId": "$ProtonFieldTargetId",
+          "ProtonSubfields": [{
+      Loop=ProtonSubfields
+    "ProtonSubfieldNumber": "$ProtonSubfieldNumber",
+    "ProtonSubfieldNominalEnergy": "$ProtonSubfieldNominalEnergy",
+    "ProtonSubfieldSpotTune": "$ProtonSubfieldSpotTune",
+          },
+          EndLoop
+          ],
+    
+      },
+"Wedge": {
+    "FieldWedges": "$FieldWedges",
+          "Wedges": [{
+      Loop=Wedges
+    "WedgeId": "$WedgeId",
+    "WedgeType": "$WedgeType",
+    "WedgeDirection": "$WedgeDirection",
+    "WedgeAngle": "$WedgeAngle",
+    "WedgeSlot": "$WedgeSlot",
+    "WedgeFactor": "$WedgeFactor",
+    "WedgeMaterialId": "$WedgeMaterialId",
+    "WedgeMaterialName": "$WedgeMaterialName",
+    "MotorizedWedgeWeightFactor": "$MotorizedWedgeWeightFactor",
+    "MotorizedWedgeMUFactor": "$MotorizedWedgeMUFactor",
+    "OmniWedgeMotorFactor": "$OmniWedgeMotorFactor",
+    "OmniWedgeOpenFactor": "$OmniWedgeOpenFactor",
+    "OmniWedgeVirtualFactor": "$OmniWedgeVirtualFactor",
+          },
+          EndLoop
+          ],
+    
+      },
+"Bolus": {
+    "FieldBoluses": "$FieldBoluses",
+          "Boluses": [{
+      Loop=Boluses
+    "BolusId": "$BolusId",
+    "BolusName": "$BolusName",
+    "FieldSBD": "$FieldSBD",
+    "FieldCAXPLB": "$FieldCAXPLB",
+    "BolusMaterialCTValue": "$BolusMaterialCTValue",
+          },
+          EndLoop
+          ],
+    
+      },
+"Block": {
+    "FieldBlocks": "$FieldBlocks",
+          "Blocks": [{
+      Loop=Blocks
+    "BlockId": "$BlockId",
+    "BlockType": "$BlockType",
+    "BlockTray": "$BlockTray",
+    "BlockTrayTransmissionFactor": "$BlockTrayTransmissionFactor",
+    "BlockThickness": "$BlockThickness",
+    "BlockMaterialThickness": "$BlockMaterialThickness",
+    "NumberOfBlockPieces": "$NumberOfBlockPieces",
+    "BlockSlot": "$BlockSlot",
+    "BlockDivergence": "$BlockDivergence",
+    "BlockMaterialId": "$BlockMaterialId",
+    "BlockMaterialName": "$BlockMaterialName",
+    "BlockTransmissionFactor": "$BlockTransmissionFactor",
+    "BlockDrillBitCorrectionSetting": "$BlockDrillBitCorrectionSetting",
+    "BlockMillingMachineId": "$BlockMillingMachineId",
+    "BlockMillingMachineDescription": "$BlockMillingMachineDescription",
+    "BlockDrillBitDiameter": "$BlockDrillBitDiameter",
+    "BlockDrillBitDescription": "$BlockDrillBitDescription",
+          },
+          EndLoop
+          ],
+    
+      },
+"Tray": {
+    "FieldTrays": "$FieldTrays",
+          "Trays": [{
+      Loop=Trays
+    "TrayId": "$TrayId",
+    "TrayInternalCode": "$TrayInternalCode",
+    "TrayMaterialId": "$TrayMaterialId",
+    "TrayMaterialName": "$TrayMaterialName",
+    "TrayMaterialThickness": "$TrayMaterialThickness",
+    "TrayTransmissionFactor": "$TrayTransmissionFactor",
+    "TraySlot": "$TraySlot",
+          },
+          EndLoop
+          ],
+    
+      },
+"Field Reference Point": {
+            "RefPoints": [{
+      Loop=RefPoints
+    "FieldDose": "$FieldDose",
+    "NominalFieldDosesExist": "$NominalFieldDosesExist",
+    "FieldRefPointX": "$FieldRefPointX",
+    "FieldRefPointY": "$FieldRefPointY",
+    "FieldRefPointDepth": "$FieldRefPointDepth",
+    "FieldRefPointPSSD": "$FieldRefPointPSSD",
+    "IsFieldRefPointDominantField": "$IsFieldRefPointDominantField",
+    "FieldRefPointType": "$FieldRefPointType",
+    "FieldRefPointSSD": "$FieldRefPointSSD",
+    "FieldRefPointEffectiveDepth": "$FieldRefPointEffectiveDepth",
+    "FieldRefPointPointDepth": "$FieldRefPointPointDepth",
+    "IsDosePrescriptionFieldRefPoint": "$IsDosePrescriptionFieldRefPoint",
+    "MU_CarriageGroup": "$MU_CarriageGroup",
+          },
+          EndLoop
+          ],
+    
+      },
+"Carriage Group": {
+            "CarriageGroups": [{
+      Loop=CarriageGroups
+    "FieldCarriageGroup": "$FieldCarriageGroup",
+    "FieldCPX1": "$FieldCPX1",
+    "FieldCPX2": "$FieldCPX2",
+    "FieldCPY1": "$FieldCPY1",
+    "FieldCPY2": "$FieldCPY2",
+          },
+          EndLoop
+          ],
+    
+    },
+    EndLoop
+    ],
+
+},
+"PLANNING VALIDATION WARNING": {
+If=$IsUnapprovedOrReviewed
+    "PlanningValidationWarnings": [{
+    Loop=PlanningValidationWarnings
+    "PlanningValidationWarningsLine": "$PlanningValidationWarningsLine",
+  },
+  EndLoop
+  ],
+EndIf
