@@ -1,618 +1,595 @@
-########################################################################################
-{
-"PLAN SUM": {
-"PlanSumId": "$PlanSumId",
-"PlanSumName": "$PlanSumName",
-"PlanSumCourseId": "$PlanSumCourseId",
-"SumPlans": [{
+﻿Section=Form
+
+Text=
+Text={
+Text="PLAN SUM": {
+Text="PlanSumId": "$PlanSumId ",
+Text="PlanSumName": "$PlanSumName ",
+Text="PlanSumCourseId": "$PlanSumCourseId ",
+Text="SumPlans": [{
 Loop=SumPlans
-  "PlanIdOfSum": "$PlanIdOfSum",
-  "PlanNameOfSum": "$PlanNameOfSum",
-  "DosePerFrac_ForSum": "$DosePerFrac_ForSum",
-  "NbrOfFrac_ForSum": "$NbrOfFrac_ForSum",
-  "TotalDose_ForSum": "$TotalDose_ForSum",
-  "TotalDoseAtPrimary_ForSum": "$TotalDoseAtPrimary_ForSum",
-  "DosePerFraction_ForSum": "$DosePerFraction_ForSum",
-    },
-    EndLoop
-    ],
-
-########################################################################################
-},
-"GENERAL": {
-"ApplicationName": "$ApplicationName",
-"ApplicationVersion": "$ApplicationVersion",
-"TaskName": "$TaskName",
-"TaskVersion": "$TaskVersion",
-"Comment": "$Comment",
-"PageNumber": "$PageNumber",
-"CursorPos": "$CursorPos",
-"UserId": "$UserId",
-"UserName": "$UserName",
-"NotCoverPage": "$NotCoverPage",
-"TemplateName": "$TemplateName",
-"CurrentDay": "$CurrentDay",
-"CurrentMonth": "$CurrentMonth",
-"CurrentYear": "$CurrentYear",
-"CurrentSecond": "$CurrentSecond",
-"CurrentMinute": "$CurrentMinute",
-"CurrentHour": "$CurrentHour",
-"CurrentDate": "$CurrentDate",
-"CurrentDateShort": "$CurrentDateShort",
-"ExtendedTimeInfo": "$ExtendedTimeInfo",
-"ShowExtendedTimeInfo": "$ShowExtendedTimeInfo",
-
-},
-"PATIENT": {
-"PatientFirstName": "$PatientFirstName",
-"PatientMiddleName": "$PatientMiddleName",
-"PatientLastName": "$PatientLastName",
-"PatientComment": "$PatientComment",
-"PatientSex": "$PatientSex",
-"PatientDateOfBirth": "$PatientDateOfBirth",
-"PatientId": "$PatientId",
-"PatientId2": "$PatientId2",
-"Hospital": "$Hospital",
-"PrimaryOncologistName": "$PrimaryOncologistName",
-"PrimaryOncologist": "$PrimaryOncologist",
-"PrimaryReferringPhysicianName": "$PrimaryReferringPhysicianName",
-"PrimaryReferringPhysician": "$PrimaryReferringPhysician",
-
-},
-"PROTOCOL": {
-"ProtocolId": "$ProtocolId",
-"ProtocolStatus": "$ProtocolStatus",
-"IsPlanPhase": "$IsPlanPhase",
-"Phases": [{
-Loop=Phases
-  "PhaseId": "$PhaseId",
-  "PhaseTotalFractions": "$PhaseTotalFractions",
-  "PhaseFractionsPerWeek": "$PhaseFractionsPerWeek",
-  "PhaseFractionsPerDay": "$PhaseFractionsPerDay",
-  "ImmobilizationDevice": "$ImmobilizationDevice",
-  "LocalizationTechnique": "$LocalizationTechnique",
-    "PrescriptionItems": [{
-  Loop=PrescriptionItems
-    "PrescriptionType": "$PrescriptionType",
-    "PrescriptionModifier": "$PrescriptionModifier",
-    "PrescriptionText": "$PrescriptionText",
-    "PrescriptionDose": "$PrescriptionDose",
-    "ActualDose": "$ActualDose",
-          },
-          EndLoop
-          ],
-    "IndexItems": [{
-  Loop=IndexItems
-    "IndexStructure": "$IndexStructure",
-    "IndexType": "$IndexType",
-    "IndexModifier": "$IndexModifier",
-    "IndexValue": "$IndexValue",
-    "IndexActualValue": "$IndexActualValue",
-          },
-          EndLoop
-          ],
-    },
-    EndLoop
-    ],
-
-},
-"DVH": {
-"DVHPlanSummaryRows": [{
-Loop=DVHPlanSummaryRows
-  Color=$DVHColor
-  "DVHColor": "$DVHColor",
-    },
-    EndLoop
-    ],
-"DVHSummaryRows": [{
-Loop=DVHSummaryRows
-  "DVHStructure": "$DVHStructure",
-  "StructureStatus": "$StructureStatus",
-  "DVHCoverage": "$DVHCoverage",
-  "DVHVolume": "$DVHVolume",
-  "DVHMin": "$DVHMin",
-  "DVHMax": "$DVHMax",
-  "DVHMean": "$DVHMean",
-  "DVHModal": "$DVHModal",
-  "DVHMedian": "$DVHMedian",
-  "DVHStdDev": "$DVHStdDev",
-  "DVHNDR": "$DVHNDR",
-  "DVHESD": "$DVHESD",
-  "DVHConformity": "$DVHConformity",
-  "DVHGradient": "$DVHGradient",
-    },
-    EndLoop
-    ],
-#DVHGraph=1200;800
-
-},
-"IMAGE": {
-"ImageId": "$ImageId",
-"ImageName": "$ImageName",
-"ImageComment": "$ImageComment",
-"ImageApprover": "$ImageApprover",
-"ImageApprovalDate": "$ImageApprovalDate",
-"ImageModality": "$ImageModality",
-"ImageSeriesId": "$ImageSeriesId",
-"ImageSeriesComment": "$ImageSeriesComment",
-"ImageContrastBolusAgent": "$ImageContrastBolusAgent",
-"ImageContrastBolusAgentIngredient": "$ImageContrastBolusAgentIngredient",
-"ImageContrastBolusAgentExists": "$ImageContrastBolusAgentExists",
-"ImagingDeviceId": "$ImagingDeviceId",
-"ImagingDeviceModel": "$ImagingDeviceModel",
-"ImagingDeviceManufacturer": "$ImagingDeviceManufacturer",
-"ImagingDeviceSerialNumber": "$ImagingDeviceSerialNumber",
-"ImageUserOrigin": "$ImageUserOrigin",
-"ImageUserOriginComment": "$ImageUserOriginComment",
-"PatientImagingOrientation": "$PatientImagingOrientation",
-"PatientTreatmentOrientation": "$PatientTreatmentOrientation",
-"PlanningCoordinateSystemName": "$PlanningCoordinateSystemName",
-
-},
-"STRUCTURE SET": {
-"StructureSetId": "$StructureSetId",
-"StructureSetComment": "$StructureSetComment",
-"Structures": [{
-Loop=Structures
-  "StructureId": "$StructureId",
-  "StructureName": "$StructureName",
-  "StructureType": "$StructureType",
-  "StructureComment": "$StructureComment",
-  "IsStructureCTValue": "$IsStructureCTValue",
-  "StructureCTValue": "$StructureCTValue",
-  "StructureStatus": "$StructureStatus",
-  "IsStructureFieldSpecificTarget": "$IsStructureFieldSpecificTarget", 
-    },
-    EndLoop
-    ],
-
-},
-"PLAN": {
-"CourseId": "$CourseId",
-"CourseIntent": "$CourseIntent",
-"CourseComment": "$CourseComment",
-"PlanId": "$PlanId",
-"PlanName": "$PlanName",
-"PlanComment": "$PlanComment",
-"PlanIntent": "$PlanIntent",
-"IsPlanModified": "$IsPlanModified",
-"PlanCreator": "$PlanCreator",
-"PlanCreationDate": "$PlanCreationDate",
-"PlanModifier": "$PlanModifier",
-"PlanModificationDate": "$PlanModificationDate",
-"PlanningApprovalDate": "$PlanningApprovalDate",
-"PlanningApprover": "$PlanningApprover",
-"TreatmentApprovalDate": "$TreatmentApprovalDate",
-"TreatmentApprover": "$TreatmentApprover",
-"ApprovalStatus": "$ApprovalStatus",
-"ApprovalDate": "$ApprovalDate",
-"ApprovalUserName": "$ApprovalUserName",
-"TargetVolume": "$TargetVolume",
-"PlanNormMethodWarning": "$PlanNormMethodWarning",
-"PlanNormPoint": "$PlanNormPoint",
-"PlanNormPointX": "$PlanNormPointX",
-"PlanNormPointY": "$PlanNormPointY",
-"PlanNormPointZ": "$PlanNormPointZ",
-"IsIRREGPlan": "$IsIRREGPlan",
-"IsVerificationPlan": "$IsVerificationPlan",
-"IsAllMUperGyValid": "$IsAllMUperGyValid",
-"TreatmentTechnique": "$TreatmentTechnique",
-"ApplicationSetupType": "$ApplicationSetupType",
-"PrescribedDosePercent": "$PrescribedDosePercent",
-"PrescribedDosePercentage": "$PrescribedDosePercentage",
-"PrimaryDosimeterUnitLabelPlan": "$PrimaryDosimeterUnitLabelPlan",
-"Fractions": "$Fractions",
-"FractionStartDelay": "$FractionStartDelay",
-"FractionsPerWeek": "$FractionsPerWeek",
-"FractionsPerDay": "$FractionsPerDay",
-"FractionsOnMonday": "$FractionsOnMonday",
-"FractionsOnTuesday": "$FractionsOnTuesday",
-"FractionsOnWednesday": "$FractionsOnWednesday",
-"FractionsOnThursday": "$FractionsOnThursday",
-"FractionsOnFriday": "$FractionsOnFriday",
-"FractionsOnSaturday": "$FractionsOnSaturday",
-"FractionsOnSunday": "$FractionsOnSunday",
-"PrescribedDosePerFraction": "$PrescribedDosePerFraction",
-"PrescribedDose": "$PrescribedDose",
-"PrimaryRefPointId": "$PrimaryRefPointId",
-"PrimaryRefPointName": "$PrimaryRefPointName",
-"DosePerFractionInPrimaryRefPoint": "$DosePerFractionInPrimaryRefPoint",
-"DoseInPrimaryRefPoint": "$DoseInPrimaryRefPoint",
-"RelativeDoseInPrimaryRefPoint": "$RelativeDoseInPrimaryRefPoint",
-
-},
-"HYPERARC": {
-"IsHyperArcPlan": "$IsHyperArcPlan",
-If=$IsHyperArcPlan
-"FixationDevice": "$FixationDevice",
-"TargetQualityMetricsTitle_RTOG_CI": "$TargetQualityMetricsTitle_RTOG_CI",
-"TargetQualityMetricsTitle_Paddick_CI": "$TargetQualityMetricsTitle_Paddick_CI",
-"TargetQualityMetricsTitle_GI": "$TargetQualityMetricsTitle_GI",
-"TargetQualityMetricsTitle_ICRU83_HI": "$TargetQualityMetricsTitle_ICRU83_HI",
-EndIf
-
-},
-"TARGET DOSE LEVEL": {
-"TargetDoseLevels": [{
-Loop=TargetDoseLevels
-  "TargetEvaluationDoseLevel": "$TargetEvaluationDoseLevel",
-  "TargetDoseLevelStructureId": "$TargetDoseLevelStructureId",
-  "TargetQualityMetricsValue_RTOG_CI": "$TargetQualityMetricsValue_RTOG_CI",
-  "TargetQualityMetricsValue_Paddick_CI": "$TargetQualityMetricsValue_Paddick_CI",
-  "TargetQualityMetricsValue_GI": "$TargetQualityMetricsValue_GI",
-  "TargetQualityMetricsValue_ICRU83_HI": "$TargetQualityMetricsValue_ICRU83_HI",
-    },
-    EndLoop
-    ],
-
-},
-"DOSE": {
-"DoseCalculationMedium": "$DoseCalculationMedium",
-"DoseCalculationMethod": "$DoseCalculationMethod",
-
-},
-"REFERENCE POINT": {
-"RefPoints": "$RefPoints",
-"RefPoints": [{
-Loop=RefPoints
-  "RefPointId": "$RefPointId",
-  "RefPointName": "$RefPointName",
-  "IsPrimaryRefPoint": "$IsPrimaryRefPoint",
-  "RefPointType": "$RefPointType",
-  "RefPointTotalPlannedDose": "$RefPointTotalPlannedDose",
-  "RefPointTotalDoseLimit": "$RefPointTotalDoseLimit",
-  "RefPointDailyDoseLimit": "$RefPointDailyDoseLimit",
-  "RefPointSessionDoseLimit": "$RefPointSessionDoseLimit",
-  "RefPointTotalDeliveredDose": "$RefPointTotalDeliveredDose",
-  "RefPointTotalDosePerFraction": "$RefPointTotalDosePerFraction",
-  "RefPointTotalDose": "$RefPointTotalDose",
-  "RefPointPatientVolumeName": "$RefPointPatientVolumeName",
-  "RefPointPatientVolumeId": "$RefPointPatientVolumeId",
-  "RefPointX": "$RefPointX",
-  "RefPointY": "$RefPointY",
-  "RefPointZ": "$RefPointZ",
-    },
-    EndLoop
-    ],
-
-},
-"PLAN VARIATION": {
-"ShowUncertaintyDVH": "$ShowUncertaintyDVH",
-"PlanVariationSummary": [{
-Loop=PlanVariationSummary
-  "PlanVariationName": "$PlanVariationName",
-  "PlanVariationShiftX": "$PlanVariationShiftX",
-  "PlanVariationShiftY": "$PlanVariationShiftY",
-  "PlanVariationShiftZ": "$PlanVariationShiftZ",
-  "PlanVariationHUError": "$PlanVariationHUError",
-    },
-    EndLoop
-    ],
-
-
-},
-"EXTERNAL BEAM PLAN": {
-
-},
-"GENERAL": {
-"Fields": "$Fields",
-"PhotonFields": "$PhotonFields",
-"ElectronFields": "$ElectronFields",
-"ProtonFields": "$ProtonFields",
-"IMRTFields": "$IMRTFields",
-"VMATFields": "$VMATFields",
-"Compensators": "$Compensators",
-"ImportedCompensators": "$ImportedCompensators",
-"IMRTOptimizedFields": "$IMRTOptimizedFields",
-"VMATOptimizedFields": "$VMATOptimizedFields",
-"BeamAngleOptimizedFields": "$BeamAngleOptimizedFields",
-"CalculatedCompensators": "$CalculatedCompensators",
-"CalculatedPortalDoseImages": "$CalculatedPortalDoseImages",
-"ModulatedScanningFields": "$ModulatedScanningFields",
-"UniformScanningFields": "$UniformScanningFields",
-"SingleScatteringFields": "$SingleScatteringFields",
-"DoubleScatteringFields": "$DoubleScatteringFields",
-"TableShift": "$TableShift",
-"PlanHasGantryPitchAngle": "$PlanHasGantryPitchAngle",
-
-},
-"Calculation": {
-"PhotonAlg": "$PhotonAlg",
-"PhotonVolumeDoseAlg": "$PhotonVolumeDoseAlg",
-"PhotonPointDoseAlg": "$PhotonPointDoseAlg",
-"PhotonPortalDoseAlg": "$PhotonPortalDoseAlg",
-"PhotonCompensatorAlg": "$PhotonCompensatorAlg",
-"PhotonIrregularCompensatorAlg": "$PhotonIrregularCompensatorAlg",
-"PhotonIMRTOptimizationAlg": "$PhotonIMRTOptimizationAlg",
-"PhotonBeamAngleOptimizationAlg": "$PhotonBeamAngleOptimizationAlg",
-"PhotonVMATOptimizationAlg": "$PhotonVMATOptimizationAlg",
-"ProtonAlg": "$ProtonAlg",
-"ProtonVolumeDoseAlg": "$ProtonVolumeDoseAlg",
-"ProtonBeamlineAlg": "$ProtonBeamlineAlg",
-"ProtonCompensatorAlg": "$ProtonCompensatorAlg",
-"ProtonPostProcessingAlg": "$ProtonPostProcessingAlg",
-"ProtonOptimizationAlg": "$ProtonOptimizationAlg",
-"ProtonBLOptimizationAlg": "$ProtonBLOptimizationAlg",
-"ProtonDDCAlg": "$ProtonDDCAlg",
-"ElectronAlg": "$ElectronAlg",
-"ElectronVolumeDoseAlg": "$ElectronVolumeDoseAlg",
-
-"PhotonAlgOptions": [{
-Loop=PhotonAlgOptions
-  "AlgOptionName": "$AlgOptionName",
-  "AlgOptionValue": "$AlgOptionValue",
-},
+Text=  "PlanIdOfSum": "$PlanIdOfSum ",
+Text=  "PlanNameOfSum": "$PlanNameOfSum ",
+Text=  "DosePerFrac_ForSum": "$DosePerFrac_ForSum ",
+Text=  "NbrOfFrac_ForSum": "$NbrOfFrac_ForSum ",
+Text=  "TotalDose_ForSum": "$TotalDose_ForSum ",
+Text=  "TotalDoseAtPrimary_ForSum": "$TotalDoseAtPrimary_ForSum ",
+Text=  "DosePerFraction_ForSum": "$DosePerFraction_ForSum "
+Text=},{
 EndLoop
-],
-
-},
-"Field": {
-"Fields": [{
-Loop=Fields
-  "FieldName": "$FieldName",
-  "FieldId": "$FieldId",
-  "IsSetupField": "$IsSetupField",
-  "FieldTechnique": "$FieldTechnique",
-  "IsFieldIMRT": "$IsFieldIMRT",
-  "IsOmniwedgeField": "$IsOmniwedgeField",
-  "IsMotorizedWedgeField": "$IsMotorizedWedgeField",
-  "FieldMachineId": "$FieldMachineId",
-  "FieldMachineModel": "$FieldMachineModel",
-  "FieldEnergyMode": "$FieldEnergyMode",
-  "FieldNominalEnergy": "$FieldNominalEnergy",
-  "FieldMachineScale": "$FieldMachineScale",
-  "FieldGantryAngleLabel": "$FieldGantryAngleLabel",
-  "FieldGantryAngle": "$FieldGantryAngle",
-  "FieldGantryPitchAngle": "$FieldGantryPitchAngle",
-  "FieldHasGantryPitchAngle": "$FieldHasGantryPitchAngle",
-  "PlanHasGantryPitchAngle": "$PlanHasGantryPitchAngle",
-  "FieldGantryStopAngle": "$FieldGantryStopAngle",
-  "FieldGantryRotationDir": "$FieldGantryRotationDir",
-  "FieldCollimatorAngleLabel": "$FieldCollimatorAngleLabel",
-  "FieldCollimatorAngle": "$FieldCollimatorAngle",
-  "FieldTableAngleLabel": "$FieldTableAngleLabel",
-  "FieldTableAngle": "$FieldTableAngle",
-  "FieldSizeX": "$FieldSizeX",
-  "FieldSizeY": "$FieldSizeY",
-  "FieldX1": "$FieldX1",
-  "FieldX2": "$FieldX2",
-  "FieldY1": "$FieldY1",
-  "FieldY2": "$FieldY2",
-  "IsFieldSymmetric": "$IsFieldSymmetric",
-  "FieldSymmetry": "$FieldSymmetry",
-  "IsFieldFixedSSD": "$IsFieldFixedSSD",
-  "FieldIsocenterX": "$FieldIsocenterX",
-  "FieldIsocenterY": "$FieldIsocenterY",
-  "FieldIsocenterZ": "$FieldIsocenterZ",
-  "IsImageLocalized": "$IsImageLocalized",
-  "FieldIsocenterBRWAP": "$FieldIsocenterBRWAP",
-  "FieldIsocenterBRWLat": "$FieldIsocenterBRWLat",
-  "FieldIsocenterBRWAxial": "$FieldIsocenterBRWAxial",
-  "FieldGroupNumber": "$FieldGroupNumber",
-    "FieldSSDAtStopAngle": "$FieldSSDAtStopAngle",
-  "FieldSSDAverage": "$FieldSSDAverage",
-    "FieldSFED": "$FieldSFED",
-  "FieldSAD": "$FieldSAD",
-  "VirtualSADX": "$VirtualSADX",
-  "VirtualSADY": "$VirtualSADY",
-  "FieldNormFactor": "$FieldNormFactor",
-  "FieldWeightFactor": "$FieldWeightFactor",
-  "FieldNormMethod": "$FieldNormMethod",
-  "FieldDoseRateLabel": "$FieldDoseRateLabel",
-  "FieldDoseRate": "$FieldDoseRate",
-  "PrimaryDosimeterUnitLabelField": "$PrimaryDosimeterUnitLabelField",
-  "FieldMonitorUnits": "$FieldMonitorUnits",
-  "OpenFieldMonitorUnits": "$OpenFieldMonitorUnits",
-  "WedgedFieldMonitorUnits": "$WedgedFieldMonitorUnits",
-  "VirtualFieldMonitorUnits": "$VirtualFieldMonitorUnits",
-  "FieldMonitorUnitsPerGy": "$FieldMonitorUnitsPerGy",
-  "FieldRefDose": "$FieldRefDose",
-      "BeamCurrentModulation": "$BeamCurrentModulation",
-  "BeamGatingOn": "$BeamGatingOn",
-  "BeamGatingOff": "$BeamGatingOff",
-  "IsCobaltField": "$IsCobaltField",
-  "MinDoseLeafDynamicLeafGap": "$MinDoseLeafDynamicLeafGap",
-  "DosimetricLeafGap": "$DosimetricLeafGap",
-  "FieldApplicators": "$FieldApplicators",
-  "ApplicatorId": "$ApplicatorId",
-      
-      },
-"Calculation": {
-        "FieldCalculationTimestamp": "$FieldCalculationTimestamp",
-  "LmcCalculationTimestamp": "$LmcCalculationTimestamp",
-  "CompCalculationTimestamp": "$CompCalculationTimestamp",
-  "BLCalculationTimestamp": "$BLCalculationTimestamp",
-  "BLOptimizerCalculationTimestamp": "$BLOptimizerCalculationTimestamp",
-  "PostProcessingCalculationTimestamp": "$PostProcessingCalculationTimestamp",
-  "BLOptimizerExecuted": "$BLOptimizerExecuted",
-  "PostProcessingExecuted": "$PostProcessingExecuted",
-                                                                                                          
-          },
-"MLC": {
-        "FieldMLCs": "$FieldMLCs",
-  "MLCId": "$MLCId",
-  "MLCManufacturer": "$MLCManufacturer",
-  "MLCSerialNumber": "$MLCSerialNumber",
-  "MLCModel": "$MLCModel",
-  "MLCRotation": "$MLCRotation",
-  "MLCMaterialId": "$MLCMaterialId",
-  "MLCMaterialName": "$MLCMaterialName",
-  "MLCTransmissionFactor": "$MLCTransmissionFactor",
-  "IsMLCPlanStatic": "$IsMLCPlanStatic",
-  "MLCPlanType": "$MLCPlanType",
-  "MLCPlanSegments": "$MLCPlanSegments",
-      
-      },
-"Compensator": {
-        "FieldCompensators": "$FieldCompensators",
-  "CompensatorId": "$CompensatorId",
-  "CompensatorType": "$CompensatorType",
-  "CompensatorTray": "$CompensatorTray",
-  "CompensatorTrayTransmissionFactor": "$CompensatorTrayTransmissionFactor",
-  "CompensatorAboveTrayFlag": "$CompensatorAboveTrayFlag",
-  "CompensatorCentralAxisThickness": "$CompensatorCentralAxisThickness",
-  "CompensatorPlaneDistance": "$CompensatorPlaneDistance",
-  "CompensatorPenumbraMargin": "$CompensatorPenumbraMargin",
-  "CompensatorBorderSmoothing": "$CompensatorBorderSmoothing",
-  "CompensatorSmearingMargins": "$CompensatorSmearingMargins",
-  "CompensatorSlot": "$CompensatorSlot",
-  "CompensatorMaterialName": "$CompensatorMaterialName",
-  "CompensatorMaterialId": "$CompensatorMaterialId",
-  "CompensatorLinearAttenuationFactor": "$CompensatorLinearAttenuationFactor",
-  "CompensatorStoppingPowerRatio": "$CompensatorStoppingPowerRatio",
-    
-      },
-"Proton Field": {
-        "IsProtonField": "$IsProtonField",
-  "IsProtonPatchField": "$IsProtonPatchField",
-  "IsProtonSpotTuneVisible": "$IsProtonSpotTuneVisible",
-  "IsBeamLineModifiers": "$IsBeamLineModifiers",
-  "PlannedDistalTargetDistance": "$PlannedDistalTargetDistance",
-  "NominalSOBPWidth": "$NominalSOBPWidth",
-  "ProtonPatchTo": "$ProtonPatchTo",
-  "ProtonNumSubfields": "$ProtonNumSubfields",
-  "SnoutId": "$SnoutId",
-  "SnoutAirGap": "$SnoutAirGap",
-  "SnoutPosition": "$SnoutPosition",
-  "BLMType": "$BLMType",
-  "BLMId": "$BLMId",
-  "BLMValue": "$BLMValue",
-  "SpotTune": "$SpotTune",
-  "RangeModulator": "$RangeModulator",
-  "FieldBeamLine": "$FieldBeamLine",
-  "ProtonFieldTargetId": "$ProtonFieldTargetId",
-          "ProtonSubfields": [{
-      Loop=ProtonSubfields
-    "ProtonSubfieldNumber": "$ProtonSubfieldNumber",
-    "ProtonSubfieldNominalEnergy": "$ProtonSubfieldNominalEnergy",
-    "ProtonSubfieldSpotTune": "$ProtonSubfieldSpotTune",
-          },
-          EndLoop
-          ],
-    
-      },
-"Wedge": {
-    "FieldWedges": "$FieldWedges",
-          "Wedges": [{
-      Loop=Wedges
-    "WedgeId": "$WedgeId",
-    "WedgeType": "$WedgeType",
-    "WedgeDirection": "$WedgeDirection",
-    "WedgeAngle": "$WedgeAngle",
-    "WedgeSlot": "$WedgeSlot",
-    "WedgeFactor": "$WedgeFactor",
-    "WedgeMaterialId": "$WedgeMaterialId",
-    "WedgeMaterialName": "$WedgeMaterialName",
-    "MotorizedWedgeWeightFactor": "$MotorizedWedgeWeightFactor",
-    "MotorizedWedgeMUFactor": "$MotorizedWedgeMUFactor",
-    "OmniWedgeMotorFactor": "$OmniWedgeMotorFactor",
-    "OmniWedgeOpenFactor": "$OmniWedgeOpenFactor",
-    "OmniWedgeVirtualFactor": "$OmniWedgeVirtualFactor",
-          },
-          EndLoop
-          ],
-    
-      },
-"Bolus": {
-    "FieldBoluses": "$FieldBoluses",
-          "Boluses": [{
-      Loop=Boluses
-    "BolusId": "$BolusId",
-    "BolusName": "$BolusName",
-    "FieldSBD": "$FieldSBD",
-    "FieldCAXPLB": "$FieldCAXPLB",
-    "BolusMaterialCTValue": "$BolusMaterialCTValue",
-          },
-          EndLoop
-          ],
-    
-      },
-"Block": {
-    "FieldBlocks": "$FieldBlocks",
-          "Blocks": [{
-      Loop=Blocks
-    "BlockId": "$BlockId",
-    "BlockType": "$BlockType",
-    "BlockTray": "$BlockTray",
-    "BlockTrayTransmissionFactor": "$BlockTrayTransmissionFactor",
-    "BlockThickness": "$BlockThickness",
-    "BlockMaterialThickness": "$BlockMaterialThickness",
-    "NumberOfBlockPieces": "$NumberOfBlockPieces",
-    "BlockSlot": "$BlockSlot",
-    "BlockDivergence": "$BlockDivergence",
-    "BlockMaterialId": "$BlockMaterialId",
-    "BlockMaterialName": "$BlockMaterialName",
-    "BlockTransmissionFactor": "$BlockTransmissionFactor",
-    "BlockDrillBitCorrectionSetting": "$BlockDrillBitCorrectionSetting",
-    "BlockMillingMachineId": "$BlockMillingMachineId",
-    "BlockMillingMachineDescription": "$BlockMillingMachineDescription",
-    "BlockDrillBitDiameter": "$BlockDrillBitDiameter",
-    "BlockDrillBitDescription": "$BlockDrillBitDescription",
-          },
-          EndLoop
-          ],
-    
-      },
-"Tray": {
-    "FieldTrays": "$FieldTrays",
-          "Trays": [{
-      Loop=Trays
-    "TrayId": "$TrayId",
-    "TrayInternalCode": "$TrayInternalCode",
-    "TrayMaterialId": "$TrayMaterialId",
-    "TrayMaterialName": "$TrayMaterialName",
-    "TrayMaterialThickness": "$TrayMaterialThickness",
-    "TrayTransmissionFactor": "$TrayTransmissionFactor",
-    "TraySlot": "$TraySlot",
-          },
-          EndLoop
-          ],
-    
-      },
-"Field Reference Point": {
-            "RefPoints": [{
-      Loop=RefPoints
-    "FieldDose": "$FieldDose",
-    "NominalFieldDosesExist": "$NominalFieldDosesExist",
-    "FieldRefPointX": "$FieldRefPointX",
-    "FieldRefPointY": "$FieldRefPointY",
-    "FieldRefPointDepth": "$FieldRefPointDepth",
-    "FieldRefPointPSSD": "$FieldRefPointPSSD",
-    "IsFieldRefPointDominantField": "$IsFieldRefPointDominantField",
-    "FieldRefPointType": "$FieldRefPointType",
-    "FieldRefPointSSD": "$FieldRefPointSSD",
-    "FieldRefPointEffectiveDepth": "$FieldRefPointEffectiveDepth",
-    "FieldRefPointPointDepth": "$FieldRefPointPointDepth",
-    "IsDosePrescriptionFieldRefPoint": "$IsDosePrescriptionFieldRefPoint",
-    "MU_CarriageGroup": "$MU_CarriageGroup",
-          },
-          EndLoop
-          ],
-    
-      },
-"Carriage Group": {
-            "CarriageGroups": [{
-      Loop=CarriageGroups
-    "FieldCarriageGroup": "$FieldCarriageGroup",
-    "FieldCPX1": "$FieldCPX1",
-    "FieldCPX2": "$FieldCPX2",
-    "FieldCPY1": "$FieldCPY1",
-    "FieldCPY2": "$FieldCPY2",
-          },
-          EndLoop
-          ],
-    
-    },
-    EndLoop
-    ],
-
-},
-"PLANNING VALIDATION WARNING": {
-If=$IsUnapprovedOrReviewed
-    "PlanningValidationWarnings": [{
-    Loop=PlanningValidationWarnings
-    "PlanningValidationWarningsLine": "$PlanningValidationWarningsLine",
-  },
+Text=}]
+Text=},
+Text="GENERAL": {
+Text="ApplicationName": "$ApplicationName ",
+Text="ApplicationVersion": "$ApplicationVersion ",
+Text="TaskName": "$TaskName ",
+Text="TaskVersion": "$TaskVersion ",
+Text="Comment": "$Comment ",
+Text="PageNumber": "$PageNumber ",
+Text="CursorPos": "$CursorPos ",
+Text="UserId": "$UserId ",
+Text="UserName": "$UserName ",
+Text="NotCoverPage": "$NotCoverPage ",
+Text="TemplateName": "$TemplateName ",
+Text="CurrentDay": "$CurrentDay ",
+Text="CurrentMonth": "$CurrentMonth ",
+Text="CurrentYear": "$CurrentYear ",
+Text="CurrentSecond": "$CurrentSecond ",
+Text="CurrentMinute": "$CurrentMinute ",
+Text="CurrentHour": "$CurrentHour ",
+Text="CurrentDate": "$CurrentDate ",
+Text="CurrentDateShort": "$CurrentDateShort ",
+Text="ExtendedTimeInfo": "$ExtendedTimeInfo ",
+Text="ShowExtendedTimeInfo": "$ShowExtendedTimeInfo "
+Text=},
+Text="PATIENT": {
+Text="PatientFirstName": "$PatientFirstName ",
+Text="PatientMiddleName": "$PatientMiddleName ",
+Text="PatientLastName": "$PatientLastName ",
+Text="PatientComment": "$PatientComment ",
+Text="PatientSex": "$PatientSex ",
+Text="PatientDateOfBirth": "$PatientDateOfBirth ",
+Text="PatientId": "$PatientId ",
+Text="PatientId2": "$PatientId2 ",
+Text="Hospital": "$Hospital ",
+Text="PrimaryOncologistName": "$PrimaryOncologistName ",
+Text="PrimaryOncologist": "$PrimaryOncologist ",
+Text="PrimaryReferringPhysicianName": "$PrimaryReferringPhysicianName ",
+Text="PrimaryReferringPhysician": "$PrimaryReferringPhysician "
+Text=},
+Text="PROTOCOL": {
+Text="ProtocolId": "$ProtocolId ",
+Text="ProtocolStatus": "$ProtocolStatus ",
+Text="IsPlanPhase": "$IsPlanPhase ",
+Text="Phases": [{
+Loop=Phases
+Text=  "PhaseId": "$PhaseId ",
+Text=  "PhaseTotalFractions": "$PhaseTotalFractions ",
+Text=  "PhaseFractionsPerWeek": "$PhaseFractionsPerWeek ",
+Text=  "PhaseFractionsPerDay": "$PhaseFractionsPerDay ",
+Text=  "ImmobilizationDevice": "$ImmobilizationDevice ",
+Text=  "LocalizationTechnique": "$LocalizationTechnique ",
+Text=  "PrescriptionItems": [{
+  Loop=PrescriptionItems
+Text=      "PrescriptionType": "$PrescriptionType ",
+Text=    "PrescriptionModifier": "$PrescriptionModifier ",
+Text=    "PrescriptionText": "$PrescriptionText ",
+Text=    "PrescriptionDose": "$PrescriptionDose ",
+Text=    "ActualDose": "$ActualDose "
+Text=  },{
   EndLoop
-  ],
+Text=  }],
+Text=  "IndexItems": [{
+  Loop=IndexItems
+Text=      "IndexStructure": "$IndexStructure ",
+Text=    "IndexType": "$IndexType ",
+Text=    "IndexModifier": "$IndexModifier ",
+Text=    "IndexValue": "$IndexValue ",
+Text=    "IndexActualValue": "$IndexActualValue "
+Text=},{
+EndLoop
+Text=}]
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="DVH": {
+Text="DVHPlanSummaryRows": [{
+Loop=DVHPlanSummaryRows
+Text=  "DVHColor": "$DVHColor "
+Text=},{
+EndLoop
+Text=}],
+Text="DVHSummaryRows": [{
+Loop=DVHSummaryRows
+Text=  "DVHStructure": "$DVHStructure ",
+Text=  "StructureStatus": "$StructureStatus ",
+Text=  "DVHCoverage": "$DVHCoverage ",
+Text=  "DVHVolume": "$DVHVolume ",
+Text=  "DVHMin": "$DVHMin ",
+Text=  "DVHMax": "$DVHMax ",
+Text=  "DVHMean": "$DVHMean ",
+Text=  "DVHModal": "$DVHModal ",
+Text=  "DVHMedian": "$DVHMedian ",
+Text=  "DVHStdDev": "$DVHStdDev ",
+Text=  "DVHNDR": "$DVHNDR ",
+Text=  "DVHESD": "$DVHESD ",
+Text=  "DVHConformity": "$DVHConformity ",
+Text=  "DVHGradient": "$DVHGradient "
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="IMAGE": {
+Text="ImageId": "$ImageId ",
+Text="ImageName": "$ImageName ",
+Text="ImageComment": "$ImageComment ",
+Text="ImageApprover": "$ImageApprover ",
+Text="ImageApprovalDate": "$ImageApprovalDate ",
+Text="ImageModality": "$ImageModality ",
+Text="ImageSeriesId": "$ImageSeriesId ",
+Text="ImageSeriesComment": "$ImageSeriesComment ",
+Text="ImageContrastBolusAgent": "$ImageContrastBolusAgent ",
+Text="ImageContrastBolusAgentIngredient": "$ImageContrastBolusAgentIngredient ",
+Text="ImageContrastBolusAgentExists": "$ImageContrastBolusAgentExists ",
+Text="ImagingDeviceId": "$ImagingDeviceId ",
+Text="ImagingDeviceModel": "$ImagingDeviceModel ",
+Text="ImagingDeviceManufacturer": "$ImagingDeviceManufacturer ",
+Text="ImagingDeviceSerialNumber": "$ImagingDeviceSerialNumber ",
+Text="ImageUserOrigin": "$ImageUserOrigin ",
+Text="ImageUserOriginComment": "$ImageUserOriginComment ",
+Text="PatientImagingOrientation": "$PatientImagingOrientation ",
+Text="PatientTreatmentOrientation": "$PatientTreatmentOrientation ",
+Text="PlanningCoordinateSystemName": "$PlanningCoordinateSystemName "
+Text=},
+Text="STRUCTURE SET": {
+Text="StructureSetId": "$StructureSetId ",
+Text="StructureSetComment": "$StructureSetComment ",
+Text="Structures": [{
+Loop=Structures
+Text=  "StructureId": "$StructureId ",
+Text=  "StructureName": "$StructureName ",
+Text=  "StructureType": "$StructureType ",
+Text=  "StructureComment": "$StructureComment ",
+Text=  "IsStructureCTValue": "$IsStructureCTValue ",
+Text=  "StructureCTValue": "$StructureCTValue ",
+Text=  "StructureStatus": "$StructureStatus ",
+Text=  "IsStructureFieldSpecificTarget": "$IsStructureFieldSpecificTarget "
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="PLAN": {
+Text="CourseId": "$CourseId ",
+Text="CourseIntent": "$CourseIntent ",
+Text="CourseComment": "$CourseComment ",
+Text="PlanId": "$PlanId ",
+Text="PlanName": "$PlanName ",
+Text="PlanComment": "$PlanComment ",
+Text="PlanIntent": "$PlanIntent ",
+Text="IsPlanModified": "$IsPlanModified ",
+Text="PlanCreator": "$PlanCreator ",
+Text="PlanCreationDate": "$PlanCreationDate ",
+Text="PlanModifier": "$PlanModifier ",
+Text="PlanModificationDate": "$PlanModificationDate ",
+Text="PlanningApprovalDate": "$PlanningApprovalDate ",
+Text="PlanningApprover": "$PlanningApprover ",
+Text="TreatmentApprovalDate": "$TreatmentApprovalDate ",
+Text="TreatmentApprover": "$TreatmentApprover ",
+Text="ApprovalStatus": "$ApprovalStatus ",
+Text="ApprovalDate": "$ApprovalDate ",
+Text="ApprovalUserName": "$ApprovalUserName ",
+Text="TargetVolume": "$TargetVolume ",
+Text="PlanNormalizationValue": "$PlanNormalizationValue ",
+Text="PlanNormalizationMethod": "$PlanNormalizationMethod ",
+Text="PlanNormMethodWarning": "$PlanNormMethodWarning ",
+Text="PlanNormPoint": "$PlanNormPoint ",
+Text="PlanNormPointX": "$PlanNormPointX ",
+Text="PlanNormPointY": "$PlanNormPointY ",
+Text="PlanNormPointZ": "$PlanNormPointZ ",
+Text="IsIRREGPlan": "$IsIRREGPlan ",
+Text="IsVerificationPlan": "$IsVerificationPlan ",
+Text="IsAllMUperGyValid": "$IsAllMUperGyValid ",
+Text="TreatmentTechnique": "$TreatmentTechnique ",
+Text="ApplicationSetupType": "$ApplicationSetupType ",
+Text="PrescribedDosePercent": "$PrescribedDosePercent ",
+Text="PrescribedDosePercentage": "$PrescribedDosePercentage ",
+Text="PrimaryDosimeterUnitLabelPlan": "$PrimaryDosimeterUnitLabelPlan ",
+Text="Fractions": "$Fractions ",
+Text="FractionStartDelay": "$FractionStartDelay ",
+Text="FractionsPerWeek": "$FractionsPerWeek ",
+Text="FractionsPerDay": "$FractionsPerDay ",
+Text="FractionsOnMonday": "$FractionsOnMonday ",
+Text="FractionsOnTuesday": "$FractionsOnTuesday ",
+Text="FractionsOnWednesday": "$FractionsOnWednesday ",
+Text="FractionsOnThursday": "$FractionsOnThursday ",
+Text="FractionsOnFriday": "$FractionsOnFriday ",
+Text="FractionsOnSaturday": "$FractionsOnSaturday ",
+Text="FractionsOnSunday": "$FractionsOnSunday ",
+Text="PrescribedDosePerFraction": "$PrescribedDosePerFraction ",
+Text="PrescribedDose": "$PrescribedDose ",
+Text="PrimaryRefPointId": "$PrimaryRefPointId ",
+Text="PrimaryRefPointName": "$PrimaryRefPointName ",
+Text="DosePerFractionInPrimaryRefPoint": "$DosePerFractionInPrimaryRefPoint ",
+Text="DoseInPrimaryRefPoint": "$DoseInPrimaryRefPoint ",
+Text="RelativeDoseInPrimaryRefPoint": "$RelativeDoseInPrimaryRefPoint "
+Text=},
+Text="HYPERARC": {
+Text="IsHyperArcPlan": "$IsHyperArcPlan ",
+If=$IsHyperArcPlan
+Text="FixationDevice": "$FixationDevice ",
+Text="TargetQualityMetricsTitle_RTOG_CI": "$TargetQualityMetricsTitle_RTOG_CI ",
+Text="TargetQualityMetricsTitle_Paddick_CI": "$TargetQualityMetricsTitle_Paddick_CI ",
+Text="TargetQualityMetricsTitle_GI": "$TargetQualityMetricsTitle_GI ",
+Text="TargetQualityMetricsTitle_ICRU83_HI": "$TargetQualityMetricsTitle_ICRU83_HI ",
 EndIf
+Text=},
+Text="TARGET DOSE LEVEL": {
+Text="TargetDoseLevels": [{
+Loop=TargetDoseLevels
+Text=  "TargetEvaluationDoseLevel": "$TargetEvaluationDoseLevel ",
+Text=  "TargetDoseLevelStructureId": "$TargetDoseLevelStructureId ",
+Text=  "TargetQualityMetricsValue_RTOG_CI": "$TargetQualityMetricsValue_RTOG_CI ",
+Text=  "TargetQualityMetricsValue_Paddick_CI": "$TargetQualityMetricsValue_Paddick_CI ",
+Text=  "TargetQualityMetricsValue_GI": "$TargetQualityMetricsValue_GI ",
+Text=  "TargetQualityMetricsValue_ICRU83_HI": "$TargetQualityMetricsValue_ICRU83_HI "
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="DOSE": {
+Text="DoseCalculationMedium": "$DoseCalculationMedium ",
+Text="DoseCalculationMethod": "$DoseCalculationMethod "
+Text=},
+Text="REFERENCE POINT": {
+Text="RefPoints": "$RefPoints ",
+Text="RefPoints": [{
+Loop=RefPoints
+Text=  "RefPointId": "$RefPointId ",
+Text=  "RefPointName": "$RefPointName ",
+Text=  "IsPrimaryRefPoint": "$IsPrimaryRefPoint ",
+Text=  "RefPointType": "$RefPointType ",
+Text=  "RefPointTotalPlannedDose": "$RefPointTotalPlannedDose ",
+Text=  "RefPointTotalDoseLimit": "$RefPointTotalDoseLimit ",
+Text=  "RefPointDailyDoseLimit": "$RefPointDailyDoseLimit ",
+Text=  "RefPointSessionDoseLimit": "$RefPointSessionDoseLimit ",
+Text=  "RefPointTotalDeliveredDose": "$RefPointTotalDeliveredDose ",
+Text=  "RefPointTotalDosePerFraction": "$RefPointTotalDosePerFraction ",
+Text=  "RefPointTotalDose": "$RefPointTotalDose ",
+Text=  "RefPointPatientVolumeName": "$RefPointPatientVolumeName ",
+Text=  "RefPointPatientVolumeId": "$RefPointPatientVolumeId ",
+Text=  "RefPointX": "$RefPointX ",
+Text=  "RefPointY": "$RefPointY ",
+Text=  "RefPointZ": "$RefPointZ "
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="PLAN VARIATION": {
+Text="ShowUncertaintyDVH": "$ShowUncertaintyDVH ",
+Text="PlanVariationSummary": [{
+Loop=PlanVariationSummary
+Text=  "PlanVariationName": "$PlanVariationName ",
+Text=  "PlanVariationShiftX": "$PlanVariationShiftX ",
+Text=  "PlanVariationShiftY": "$PlanVariationShiftY ",
+Text=  "PlanVariationShiftZ": "$PlanVariationShiftZ ",
+Text=  "PlanVariationHUError": "$PlanVariationHUError "
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="EXTERNAL BEAM PLAN": {
+Text=},
+Text="GENERAL": {
+Text="Fields": "$Fields ",
+Text="PhotonFields": "$PhotonFields ",
+Text="ElectronFields": "$ElectronFields ",
+Text="ProtonFields": "$ProtonFields ",
+Text="IMRTFields": "$IMRTFields ",
+Text="VMATFields": "$VMATFields ",
+Text="Compensators": "$Compensators ",
+Text="ImportedCompensators": "$ImportedCompensators ",
+Text="IMRTOptimizedFields": "$IMRTOptimizedFields ",
+Text="VMATOptimizedFields": "$VMATOptimizedFields ",
+Text="BeamAngleOptimizedFields": "$BeamAngleOptimizedFields ",
+Text="CalculatedCompensators": "$CalculatedCompensators ",
+Text="CalculatedPortalDoseImages": "$CalculatedPortalDoseImages ",
+Text="ModulatedScanningFields": "$ModulatedScanningFields ",
+Text="UniformScanningFields": "$UniformScanningFields ",
+Text="SingleScatteringFields": "$SingleScatteringFields ",
+Text="DoubleScatteringFields": "$DoubleScatteringFields ",
+Text="TableShift": "$TableShift ",
+Text="PlanHasGantryPitchAngle": "$PlanHasGantryPitchAngle "
+Text=},
+Text="Calculation": {
+Text="PhotonAlg": "$PhotonAlg ",
+Text="PhotonVolumeDoseAlg": "$PhotonVolumeDoseAlg ",
+Text="PhotonPointDoseAlg": "$PhotonPointDoseAlg ",
+Text="PhotonPortalDoseAlg": "$PhotonPortalDoseAlg ",
+Text="PhotonCompensatorAlg": "$PhotonCompensatorAlg ",
+Text="PhotonIrregularCompensatorAlg": "$PhotonIrregularCompensatorAlg ",
+Text="PhotonIMRTOptimizationAlg": "$PhotonIMRTOptimizationAlg ",
+Text="PhotonBeamAngleOptimizationAlg": "$PhotonBeamAngleOptimizationAlg ",
+Text="PhotonVMATOptimizationAlg": "$PhotonVMATOptimizationAlg ",
+Text="ProtonAlg": "$ProtonAlg ",
+Text="ProtonVolumeDoseAlg": "$ProtonVolumeDoseAlg ",
+Text="ProtonBeamlineAlg": "$ProtonBeamlineAlg ",
+Text="ProtonCompensatorAlg": "$ProtonCompensatorAlg ",
+Text="ProtonPostProcessingAlg": "$ProtonPostProcessingAlg ",
+Text="ProtonOptimizationAlg": "$ProtonOptimizationAlg ",
+Text="ProtonBLOptimizationAlg": "$ProtonBLOptimizationAlg ",
+Text="ProtonDDCAlg": "$ProtonDDCAlg ",
+Text="ElectronAlg": "$ElectronAlg ",
+Text="ElectronVolumeDoseAlg": "$ElectronVolumeDoseAlg ",
+Text="PhotonAlgOptions": [{
+Loop=PhotonAlgOptions
+Text=  "AlgOptionName": "$AlgOptionName ",
+Text=  "AlgOptionValue": "$AlgOptionValue "
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="Fields": [{
+Loop=Fields
+Text="Field": {
+Text=  "FieldName": "$FieldName ",
+Text=  "FieldId": "$FieldId ",
+Text=  "IsSetupField": "$IsSetupField ",
+Text=  "FieldTechnique": "$FieldTechnique ",
+Text=  "IsFieldIMRT": "$IsFieldIMRT ",
+Text=  "IsOmniwedgeField": "$IsOmniwedgeField ",
+Text=  "IsMotorizedWedgeField": "$IsMotorizedWedgeField ",
+Text=  "FieldMachineId": "$FieldMachineId ",
+Text=  "FieldMachineModel": "$FieldMachineModel ",
+Text=  "FieldEnergyMode": "$FieldEnergyMode ",
+Text=  "FieldNominalEnergy": "$FieldNominalEnergy ",
+Text=  "FieldMachineScale": "$FieldMachineScale ",
+Text=  "FieldGantryAngleLabel": "$FieldGantryAngleLabel ",
+Text=  "FieldGantryAngle": "$FieldGantryAngle ",
+Text=  "FieldGantryPitchAngle": "$FieldGantryPitchAngle ",
+Text=  "FieldHasGantryPitchAngle": "$FieldHasGantryPitchAngle ",
+Text=  "PlanHasGantryPitchAngle": "$PlanHasGantryPitchAngle ",
+Text=  "FieldGantryStopAngle": "$FieldGantryStopAngle ",
+Text=  "FieldGantryRotationDir": "$FieldGantryRotationDir ",
+Text=  "FieldCollimatorAngleLabel": "$FieldCollimatorAngleLabel ",
+Text=  "FieldCollimatorAngle": "$FieldCollimatorAngle ",
+Text=  "FieldTableAngleLabel": "$FieldTableAngleLabel ",
+Text=  "FieldTableAngle": "$FieldTableAngle ",
+Text=  "FieldSizeX": "$FieldSizeX ",
+Text=  "FieldSizeY": "$FieldSizeY ",
+Text=  "FieldX1": "$FieldX1 ",
+Text=  "FieldX2": "$FieldX2 ",
+Text=  "FieldY1": "$FieldY1 ",
+Text=  "FieldY2": "$FieldY2 ",
+Text=  "IsFieldSymmetric": "$IsFieldSymmetric ",
+Text=  "FieldSymmetry": "$FieldSymmetry ",
+Text=  "IsFieldFixedSSD": "$IsFieldFixedSSD ",
+Text=  "FieldIsocenterX": "$FieldIsocenterX ",
+Text=  "FieldIsocenterY": "$FieldIsocenterY ",
+Text=  "FieldIsocenterZ": "$FieldIsocenterZ ",
+Text=  "IsImageLocalized": "$IsImageLocalized ",
+Text=  "FieldIsocenterBRWAP": "$FieldIsocenterBRWAP ",
+Text=  "FieldIsocenterBRWLat": "$FieldIsocenterBRWLat ",
+Text=  "FieldIsocenterBRWAxial": "$FieldIsocenterBRWAxial ",
+Text=  "FieldGroupNumber": "$FieldGroupNumber ",
+Text=  "FieldCalculatedSSD": "$FieldCalculatedSSD ",
+Text=  "FieldSSDAtStopAngle": "$FieldSSDAtStopAngle ",
+Text=  "FieldSSDAverage": "$FieldSSDAverage ",
+Text=  "FieldActualSSD": "$FieldActualSSD ",
+Text=  "FieldSFED": "$FieldSFED ",
+Text=  "FieldSAD": "$FieldSAD ",
+Text=  "VirtualSADX": "$VirtualSADX ",
+Text=  "VirtualSADY": "$VirtualSADY ",
+Text=  "FieldNormFactor": "$FieldNormFactor ",
+Text=  "FieldWeightFactor": "$FieldWeightFactor ",
+Text=  "FieldNormMethod": "$FieldNormMethod ",
+Text=  "FieldDoseRateLabel": "$FieldDoseRateLabel ",
+Text=  "FieldDoseRate": "$FieldDoseRate ",
+Text=  "PrimaryDosimeterUnitLabelField": "$PrimaryDosimeterUnitLabelField ",
+Text=  "FieldMonitorUnits": "$FieldMonitorUnits ",
+Text=  "OpenFieldMonitorUnits": "$OpenFieldMonitorUnits ",
+Text=  "WedgedFieldMonitorUnits": "$WedgedFieldMonitorUnits ",
+Text=  "VirtualFieldMonitorUnits": "$VirtualFieldMonitorUnits ",
+Text=  "FieldMonitorUnitsPerGy": "$FieldMonitorUnitsPerGy ",
+Text=  "FieldRefDose": "$FieldRefDose ",
+Text=  "FieldImageId": "$FieldImageId ",
+Text=  "FieldImageName": "$FieldImageName ",
+Text=  "BeamCurrentModulation": "$BeamCurrentModulation ",
+Text=  "BeamGatingOn": "$BeamGatingOn ",
+Text=  "BeamGatingOff": "$BeamGatingOff ",
+Text=  "IsCobaltField": "$IsCobaltField ",
+Text=  "MinDoseLeafDynamicLeafGap": "$MinDoseLeafDynamicLeafGap ",
+Text=  "DosimetricLeafGap": "$DosimetricLeafGap ",
+Text=  "FieldApplicators": "$FieldApplicators ",
+Text=  "ApplicatorId": "$ApplicatorId "
+Text=  },
+Text="Calculation": {
+Text=  "FieldCalculationTimestamp": "$FieldCalculationTimestamp ",
+Text=  "LmcCalculationTimestamp": "$LmcCalculationTimestamp ",
+Text=  "CompCalculationTimestamp": "$CompCalculationTimestamp ",
+Text=  "BLCalculationTimestamp": "$BLCalculationTimestamp ",
+Text=  "BLOptimizerCalculationTimestamp": "$BLOptimizerCalculationTimestamp ",
+Text=  "PostProcessingCalculationTimestamp": "$PostProcessingCalculationTimestamp ",
+Text=  "BLOptimizerExecuted": "$BLOptimizerExecuted ",
+Text=  "PostProcessingExecuted": "$PostProcessingExecuted "
+Text=  },
+Text="MLC": {
+Text=  "FieldMLCs": "$FieldMLCs ",
+Text=  "MLCId": "$MLCId ",
+Text=  "MLCManufacturer": "$MLCManufacturer ",
+Text=  "MLCSerialNumber": "$MLCSerialNumber ",
+Text=  "MLCModel": "$MLCModel ",
+Text=  "MLCRotation": "$MLCRotation ",
+Text=  "MLCMaterialId": "$MLCMaterialId ",
+Text=  "MLCMaterialName": "$MLCMaterialName ",
+Text=  "MLCTransmissionFactor": "$MLCTransmissionFactor ",
+Text=  "IsMLCPlanStatic": "$IsMLCPlanStatic ",
+Text=  "MLCPlanType": "$MLCPlanType ",
+Text=  "MLCPlanSegments": "$MLCPlanSegments "
+Text=  },
+Text="Compensator": {
+Text=  "FieldCompensators": "$FieldCompensators ",
+Text=  "CompensatorId": "$CompensatorId ",
+Text=  "CompensatorType": "$CompensatorType ",
+Text=  "CompensatorTray": "$CompensatorTray ",
+Text=  "CompensatorTrayTransmissionFactor": "$CompensatorTrayTransmissionFactor ",
+Text=  "CompensatorAboveTrayFlag": "$CompensatorAboveTrayFlag ",
+Text=  "CompensatorCentralAxisThickness": "$CompensatorCentralAxisThickness ",
+Text=  "CompensatorPlaneDistance": "$CompensatorPlaneDistance ",
+Text=  "CompensatorPenumbraMargin": "$CompensatorPenumbraMargin ",
+Text=  "CompensatorBorderSmoothing": "$CompensatorBorderSmoothing ",
+Text=  "CompensatorSmearingMargins": "$CompensatorSmearingMargins ",
+Text=  "CompensatorSlot": "$CompensatorSlot ",
+Text=  "CompensatorMaterialName": "$CompensatorMaterialName ",
+Text=  "CompensatorMaterialId": "$CompensatorMaterialId ",
+Text=  "CompensatorLinearAttenuationFactor": "$CompensatorLinearAttenuationFactor ",
+Text=  "CompensatorStoppingPowerRatio": "$CompensatorStoppingPowerRatio "
+Text=  },
+Text="Proton Field": {
+Text=  "IsProtonField": "$IsProtonField ",
+Text=  "IsProtonPatchField": "$IsProtonPatchField ",
+Text=  "IsProtonSpotTuneVisible": "$IsProtonSpotTuneVisible ",
+Text=  "IsBeamLineModifiers": "$IsBeamLineModifiers ",
+Text=  "PlannedDistalTargetDistance": "$PlannedDistalTargetDistance ",
+Text=  "NominalSOBPWidth": "$NominalSOBPWidth ",
+Text=  "ProtonPatchTo": "$ProtonPatchTo ",
+Text=  "ProtonNumSubfields": "$ProtonNumSubfields ",
+Text=  "SnoutId": "$SnoutId ",
+Text=  "SnoutAirGap": "$SnoutAirGap ",
+Text=  "SnoutPosition": "$SnoutPosition ",
+Text=  "BLMType": "$BLMType ",
+Text=  "BLMId": "$BLMId ",
+Text=  "BLMValue": "$BLMValue ",
+Text=  "SpotTune": "$SpotTune ",
+Text=  "RangeModulator": "$RangeModulator ",
+Text=  "FieldBeamLine": "$FieldBeamLine ",
+Text=  "ProtonFieldTargetId": "$ProtonFieldTargetId ",
+Text=  "ProtonSubfields": [{
+  Loop=ProtonSubfields
+Text=      "ProtonSubfieldNumber": "$ProtonSubfieldNumber ",
+Text=    "ProtonSubfieldNominalEnergy": "$ProtonSubfieldNominalEnergy ",
+Text=    "ProtonSubfieldSpotTune": "$ProtonSubfieldSpotTune "
+Text=  },{
+  EndLoop
+Text=  }]
+Text=  },
+Text="Wedge": {
+Text=  "FieldWedges": "$FieldWedges ",
+Text=  "Wedges": [{
+  Loop=Wedges
+Text=      "WedgeId": "$WedgeId ",
+Text=    "WedgeType": "$WedgeType ",
+Text=    "WedgeDirection": "$WedgeDirection ",
+Text=    "WedgeAngle": "$WedgeAngle ",
+Text=    "WedgeSlot": "$WedgeSlot ",
+Text=    "WedgeFactor": "$WedgeFactor ",
+Text=    "WedgeMaterialId": "$WedgeMaterialId ",
+Text=    "WedgeMaterialName": "$WedgeMaterialName ",
+Text=    "MotorizedWedgeWeightFactor": "$MotorizedWedgeWeightFactor ",
+Text=    "MotorizedWedgeMUFactor": "$MotorizedWedgeMUFactor ",
+Text=    "OmniWedgeMotorFactor": "$OmniWedgeMotorFactor ",
+Text=    "OmniWedgeOpenFactor": "$OmniWedgeOpenFactor ",
+Text=    "OmniWedgeVirtualFactor": "$OmniWedgeVirtualFactor "
+Text=  },{
+  EndLoop
+Text=  }]
+Text=  },
+Text="Bolus": {
+Text=  "FieldBoluses": "$FieldBoluses ",
+Text=  "Boluses": [{
+  Loop=Boluses
+Text=      "BolusId": "$BolusId ",
+Text=    "BolusName": "$BolusName ",
+Text=    "FieldSBD": "$FieldSBD ",
+Text=    "FieldCAXPLB": "$FieldCAXPLB ",
+Text=    "BolusMaterialCTValue": "$BolusMaterialCTValue "
+Text=  },{
+  EndLoop
+Text=  }]
+Text=  },
+Text="Block": {
+Text=  "FieldBlocks": "$FieldBlocks ",
+Text=  "Blocks": [{
+  Loop=Blocks
+Text=      "BlockId": "$BlockId ",
+Text=    "BlockType": "$BlockType ",
+Text=    "BlockTray": "$BlockTray ",
+Text=    "BlockTrayTransmissionFactor": "$BlockTrayTransmissionFactor ",
+Text=    "BlockThickness": "$BlockThickness ",
+Text=    "BlockMaterialThickness": "$BlockMaterialThickness ",
+Text=    "NumberOfBlockPieces": "$NumberOfBlockPieces ",
+Text=    "BlockSlot": "$BlockSlot ",
+Text=    "BlockDivergence": "$BlockDivergence ",
+Text=    "BlockMaterialId": "$BlockMaterialId ",
+Text=    "BlockMaterialName": "$BlockMaterialName ",
+Text=    "BlockTransmissionFactor": "$BlockTransmissionFactor ",
+Text=    "BlockDrillBitCorrectionSetting": "$BlockDrillBitCorrectionSetting ",
+Text=    "BlockMillingMachineId": "$BlockMillingMachineId ",
+Text=    "BlockMillingMachineDescription": "$BlockMillingMachineDescription ",
+Text=    "BlockDrillBitDiameter": "$BlockDrillBitDiameter ",
+Text=    "BlockDrillBitDescription": "$BlockDrillBitDescription "
+Text=  },{
+  EndLoop
+Text=  }]
+Text=  },
+Text="Tray": {
+Text=  "FieldTrays": "$FieldTrays ",
+Text=  "Trays": [{
+  Loop=Trays
+Text=      "TrayId": "$TrayId ",
+Text=    "TrayInternalCode": "$TrayInternalCode ",
+Text=    "TrayMaterialId": "$TrayMaterialId ",
+Text=    "TrayMaterialName": "$TrayMaterialName ",
+Text=    "TrayMaterialThickness": "$TrayMaterialThickness ",
+Text=    "TrayTransmissionFactor": "$TrayTransmissionFactor ",
+Text=    "TraySlot": "$TraySlot "
+Text=  },{
+  EndLoop
+Text=  }]
+Text=  },
+Text="Field Reference Point": {
+Text=  "RefPoints": [{
+  Loop=RefPoints
+Text=      "FieldDose": "$FieldDose ",
+Text=    "NominalFieldDosesExist": "$NominalFieldDosesExist ",
+Text=    "FieldRefPointX": "$FieldRefPointX ",
+Text=    "FieldRefPointY": "$FieldRefPointY ",
+Text=    "FieldRefPointDepth": "$FieldRefPointDepth ",
+Text=    "FieldRefPointPSSD": "$FieldRefPointPSSD ",
+Text=    "IsFieldRefPointDominantField": "$IsFieldRefPointDominantField ",
+Text=    "FieldRefPointType": "$FieldRefPointType ",
+Text=    "FieldRefPointSSD": "$FieldRefPointSSD ",
+Text=    "FieldRefPointEffectiveDepth": "$FieldRefPointEffectiveDepth ",
+Text=    "FieldRefPointPointDepth": "$FieldRefPointPointDepth ",
+Text=    "IsDosePrescriptionFieldRefPoint": "$IsDosePrescriptionFieldRefPoint ",
+Text=    "MU_CarriageGroup": "$MU_CarriageGroup "
+Text=  },{
+  EndLoop
+Text=  }]
+Text=  },
+Text="Carriage Group": {
+Text=  "CarriageGroups": [{
+  Loop=CarriageGroups
+Text=      "FieldCarriageGroup": "$FieldCarriageGroup ",
+Text=    "FieldCPX1": "$FieldCPX1 ",
+Text=    "FieldCPX2": "$FieldCPX2 ",
+Text=    "FieldCPY1": "$FieldCPY1 ",
+Text=    "FieldCPY2": "$FieldCPY2 "
+Text=  },{
+  EndLoop
+Text=  }]
+Text=},{
+EndLoop
+Text=}]
+Text=},
+Text="PLANNING VALIDATION WARNING": {
+If=$IsUnapprovedOrReviewed
+Text=  "PlanningValidationWarnings": [{
+  Loop=PlanningValidationWarnings
+Text=      "PlanningValidationWarningsLine": "$PlanningValidationWarningsLine "
+Text=  },{
+  EndLoop
+Text=  }],
+EndIf
+Text=}
+Text=}
